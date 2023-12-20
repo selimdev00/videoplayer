@@ -13,21 +13,26 @@
     <div class="player__wrapper">
         <div class="player__box">
             <div class="player">
-                <div class="player__screen">
-                    <img class="player__screen__placeholder" src="./assets/images/placeholder.jpeg" alt="">
+                <div class="player__screen is-loading">
+                    <img id="placeholder" class="player__screen__placeholder" src="./assets/images/placeholder.jpeg" alt="">
+
+                    <video id="video" class="player__screen__video" src=""></video>
                 </div>
                 <div class="player__panel">
                     <div class="player__controls">
                         <div class="player__control player__icon">
                             <img src="./assets/icons/backward.svg" alt="backward">
                         </div>
-                        <div class="player__control player__icon">
+                        <div data-controls="play" class="player__control player__icon">
                             <img src="./assets/icons/play.svg" alt="play">
+                        </div>
+                        <div data-controls="pause" class="player__control player__icon">
+                            <img src="./assets/icons/pause.svg" alt="pause">
                         </div>
                         <div class="player__control player__icon">
                             <img src="./assets/icons/forward.svg" alt="forward">
                         </div>
-                        <div class="player__control player__icon">
+                        <div data-controls="stop" class="player__control player__icon">
                             <img src="./assets/icons/stop.svg" alt="stop">
                         </div>
                     </div>
@@ -53,7 +58,7 @@
 
                     </div>
 
-                    <div class="player__full player__icon">
+                    <div data-controls="fullscreen" class="player__full player__icon">
                         <img src="./assets/icons/fullscreen.svg" alt="fullscreen">
                     </div>
                 </div>
